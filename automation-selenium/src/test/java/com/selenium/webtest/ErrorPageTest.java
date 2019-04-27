@@ -1,0 +1,22 @@
+package com.selenium.webtest;
+
+import static org.junit.Assert.assertEquals;
+
+import java.io.IOException;
+
+import org.junit.Test;
+
+import com.selenium.webtest.ErrorPage;
+
+public class ErrorPageTest extends WebTestBase {
+
+	private ErrorPage errorPage = new ErrorPage();;
+
+	@Test
+	public void login_invalid_user() throws IOException {
+		String nextPage = errorPage.badUrl(driver, "http://localhost:8080/");
+		screenshotHelper.saveScreenshot("error_screenshot.png");
+		assertEquals("HTTP Status 404 – Not Found", nextPage);
+	}
+
+}

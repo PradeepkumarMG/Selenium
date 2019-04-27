@@ -1,0 +1,5 @@
+com\selenium\webtest\HomePageTest.class
+com\selenium\webtest\ScreenshotHelper.class
+com\selenium\webtest\ErrorPageTest.class
+com\selenium\webtest\NewUserPageTest.class
+com\selenium\webtest\WebTestBase.class
